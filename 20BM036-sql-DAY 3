@@ -1,0 +1,19 @@
+create database db0002;
+create table books3(
+   title varchar(50),
+   author varchar(100),
+   genre varchar(120),
+   publication_year year,
+   price int);
+insert into books3 values
+("Book 1","prasanth","Fantasy",1999,19),
+("Book 2","surya","Poetry",2003,20),
+("Book 3","rohith","Thriller",2004,46),
+("Book 4","kathir","Novel",2025,34),
+("Book 5","selva","Friction",2023,67);
+select * from books3;
+select * from books3 where title="Book 1";
+update books3 set price=20 where price=46;
+select * from books3;
+delete from books3 where title="Book 5";
+select * from books3;
