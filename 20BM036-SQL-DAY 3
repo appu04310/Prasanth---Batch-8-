@@ -1,0 +1,16 @@
+create database db99;
+
+CREATE TABLE Books1 (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL,
+    author VARCHAR(100) NOT NULL,
+    publication_year INT,
+    genre VARCHAR(50),
+    price DECIMAL(8, 2)
+);
+INSERT INTO Books1 (title, author, publication_year, genre, price)
+VALUES ('The Great Gatsby', 'F. Scott Fitzgerald', 1925, 'Fiction', 12.99);
+select * from Books1
+#This statement will insert a book with the title "The Great Gatsby," authored by "F. Scott Fitzgerald," published in 1925, belonging to the fiction genre, and priced at $12.99.
+
+#You can repeat the INSERT INTO statement to add more books to the table. Just make sure to provide the appropriate values for each column.
