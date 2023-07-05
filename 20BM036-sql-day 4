@@ -1,0 +1,31 @@
+create database TradingHuB1;
+create table customer(
+sno int primary key,
+name  varchar(30),
+address varchar(50),
+age int);
+insert into customer values
+  (1,"aaa","kerala main road",22),
+  (2,"bbb","neermullikutai",23),
+  (3,"ccc","dubai kurukkusanthu",21),
+  (4,"ddd","jamaica mainroad",20),
+  (5,"eee","sindaporecity",24);
+select * from customer;
+create table Transactions(
+  s_no int,
+  name varchar(30),
+  purchasing_amount varchar(50),
+  selling_amt varchar(50),
+  sno int);
+insert into Transactions values
+  (01,"aaa",15000,30000,1),
+  (02,"bbb",5000,5000,2),
+  (03,"ccc",6000,12000,3),
+  (04,"ddd",7000,15000,4),
+  (05,"eee",14000,25000,5);
+select * from Transactions;
+select * from Transactions order by selling_amt desc;
+select Transactions.s_no,Transactions.name,Transactions.purchasing_amount,Transactions.selling_amt,Transactions.sno from Transactions
+left join customer
+on Transactions.sno=customer.sno;
+select * from Transactions where selling_amt>12000;
